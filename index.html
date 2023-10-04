@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form event</title>
+    <script src="./code.jquery.com_jquery-3.7.1.min.js"></script>
+    <style>
+       *{
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+       } 
+       body{
+        width: 80%;
+        margin: auto;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+       }
+       #form{
+        display: flex;
+        flex-direction: column;
+        
+
+       }
+       label{
+        font-size: 20px;
+        font-family: sans-serif;
+        font-weight: 600;
+        
+       }
+       input{
+        height: 40px;
+        width: 400px;
+        border-radius: 10px;
+        background-color: lightblue;
+        font-size: 16px;
+        font-weight: 600;
+        padding-left: 10px;
+       }
+       select{
+        height: 40px;
+        background-color: lightblue;
+        border-radius: 10px;
+        font-size: 16px;
+        font-weight: 600;
+        padding-left: 10px;
+       }
+       button{
+       height: 40px;
+       width: 120px;
+       background-color: red;
+        border-radius: 10px;
+        font-size: 16px;
+        font-weight: 600;
+        padding-left: 10px;
+        justify-content: center;
+        align-items: center;
+        align-self: flex-end;
+        display: flex;
+        cursor: pointer;
+
+       }
+       
+    </style>
+</head>
+<body>
+<div id="form">
+    <h1 style="align-items: center;">Form Events</h1>
+    <label for="aname">Enter your first Name</label>
+    <input type="text" placeholder="EnterYourFirstName", id="aname"><br>
+    <label for="bname">Enter your Last name</label>
+    <input type="text" placeholder="EnterYourLastName", id="bname"><br>
+    <label for="cname">Enter your location</label>
+    <input type="text" placeholder="EnterYourLocation" id="cname"><br>
+    <label for="dname">Chose Your Marketing Country</label>
+    <input type="text" placeholder="ChoseYourMarketingCountry" id="dname">
+<br>
+<label for="">Chose Your country </label>
+    <select name="" id="country">
+        <option value="">Chose Your Country</option>
+        <option value="pakistan">Pakistan</option>
+        <option value="austria">Austria</option>
+        <option value="norway">Norway</option>
+        <option value="ethopia">Ethopia</option>
+        <option value="tanzania">Tanzania</option>
+        <option value="moroco">Moroco</option><br><br>
+
+       
+
+
+    </select>
+    <br>  
+    <button id="btn">Next</button>
+
+
+
+ 
+</div>
+<script>
+    $('#aname,#bname,#cname,#dname').focus(function(){
+        $(this).css({'color':'black','background-color':'lightgreen',})
+    });
+    $('#aname,#bname,#cname,#dname').blur(function(){
+        $(this).css({'color':'black','background-color':'',})
+    });
+    $('#country').change(function(){
+        $(this).css({'color':'black','background-color':'lightgreen',})
+       
+    });
+    
+</script>
+
+    
+</body>
+</html>
